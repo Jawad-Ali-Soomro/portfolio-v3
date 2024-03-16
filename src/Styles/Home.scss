@@ -1,0 +1,113 @@
+.home-wrap {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "jost";
+  .hero-sect {
+    min-height: 90vh;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+    h2 {
+      font-size: 3rem;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      font-family: protest revolution;
+      text-transform: uppercase;
+      z-index: 0;
+    }
+    h1 {
+      font-size: 20rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-family: protest revolution;
+    }
+    .colors-sect {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      gap: 20px;
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+      z-index: 1;
+      transition: 0.5s;
+      background: rgba($color: #000000, $alpha: 0.5);
+    }
+    .color-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .top {
+      gap: 10px;
+      position: relative;
+    }
+
+    .top::after {
+      content: "Choose Background";
+      position: absolute;
+      color: white;
+      left: -300px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .bottom {
+      gap: 10px;
+      position: relative;
+    }
+
+    .bottom::after {
+      content: "Choose Color";
+      position: absolute;
+      color: white;
+      left: -300px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .color-box:focus {
+      border: 1px solid black;
+    }
+  }
+  .color-picker {
+    position: fixed;
+    width: 50px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 50px);
+    gap: 10px;
+    z-index: 10;
+    left: 20px;
+    button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: transparent;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: 0.3s;
+      border: 1px solid;
+    }
+  }
+  .navs-wrap {
+    width: 100%;
+    height: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    ul {
+      gap: 50px;
+      li {
+        list-style: none;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
