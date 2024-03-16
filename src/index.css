@@ -9,10 +9,10 @@
   font-family: poppins;
   text-transform: uppercase;
   margin-top: 10px;
-  color: orange;
+  color: pink;
   font-weight: 900;
 }
 .loader h1 span {
   color: transparent;
-  -webkit-text-stroke: 1px orange;
+  -webkit-text-stroke: 1px blue;
 }
