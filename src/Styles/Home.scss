@@ -7,20 +7,23 @@
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     position: relative;
+    background: #41b3a3;
     h2 {
       font-size: 3rem;
       position: absolute;
       top: 50px;
       left: 50px;
-      font-family: protest revolution;
+      font-family: limelight;
       text-transform: uppercase;
       z-index: 0;
+      color: white;
     }
     h1 {
       font-size: 20rem;
       font-weight: 900;
       text-transform: uppercase;
-      font-family: protest revolution;
+      font-family: limelight;
+      color: white;
     }
     .colors-sect {
       width: 100%;
@@ -107,6 +110,7 @@
         list-style: none;
         font-size: 1.5rem;
         text-transform: uppercase;
+        cursor: pointer;
       }
     }
   }

@@ -5,8 +5,22 @@ import { FaArrowRight } from "react-icons/fa";
 import "../Styles/About.scss";
 
 const Home = () => {
-  const colors = ["#e27d60", "#85dcbe", "orange", "pink", "#41b3a3", "#c38d9e"];
-  const front_colors = ["white", "black"];
+  const colors = [
+    "#e27d60",
+    "#85dcbe",
+    "rgba(255,255,255,0.1)",
+    "black",
+    "#41b3a3",
+    "#c38d9e",
+  ];
+  const front_colors = [
+    "white",
+    "black",
+    "orange",
+    "pink",
+    "#41b3a3",
+    "#c38d9e",
+  ];
   const [color, set_color] = useState();
   const [show_colors, set_show_colors] = useState(false);
   const [front_color, set_front_color] = useState();
@@ -92,7 +106,7 @@ const Home = () => {
         </ul>
       </div>
       <div className="about-page flex col">
-        <h1>About</h1>
+        <h1 style={{ color: `${front_color}` }}>About</h1>
         <div className="bottom flex">
           <div className="img-sect flex">
             <img src="./avatar.png" alt="" />
