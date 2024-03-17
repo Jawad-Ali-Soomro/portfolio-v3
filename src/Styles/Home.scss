@@ -3,27 +3,31 @@
   min-height: 100vh;
   font-family: "jost";
   .hero-sect {
-    min-height: 90vh;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    min-height: 100vh;
     position: relative;
     background: #41b3a3;
     h2 {
-      font-size: 3rem;
+      font-size: 4rem;
       position: absolute;
       top: 50px;
       left: 50px;
-      font-family: limelight;
+      font-family: protest revolution;
       text-transform: uppercase;
       z-index: 0;
       color: white;
+      font-weight: 900;
     }
     h1 {
       font-size: 20rem;
       font-weight: 900;
       text-transform: uppercase;
-      font-family: limelight;
+      font-family: protest revolution;
+      margin-top: 50px;
       color: white;
+      span {
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+      }
     }
     .colors-sect {
       width: 100%;
@@ -36,41 +40,42 @@
       z-index: 1;
       transition: 0.5s;
       background: rgba($color: #000000, $alpha: 0.5);
+      .close-btn {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        bottom: 50px;
+        border: 2px solid white;
+        border-radius: 50px;
+        cursor: pointer;
+        div:first-child {
+          width: 30px;
+          height: 2px;
+          background: white;
+          position: absolute;
+          top: 33px;
+          left: 20px;
+          transform: rotate(-45deg);
+        }
+        div:last-child {
+          width: 30px;
+          height: 2px;
+          background: white;
+          position: absolute;
+          top: 33px;
+          left: 20px;
+          transform: rotate(45deg);
+        }
+      }
+      .top {
+        gap: 20px;
+      }
     }
     .color-box {
-      width: 50px;
-      height: 50px;
-      border-radius: 25px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
       cursor: pointer;
-    }
-    .top {
-      gap: 10px;
-      position: relative;
-    }
-
-    .top::after {
-      content: "Choose Background";
-      position: absolute;
-      color: white;
-      left: -300px;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    .bottom {
-      gap: 10px;
-      position: relative;
-    }
-
-    .bottom::after {
-      content: "Choose Color";
-      position: absolute;
-      color: white;
-      left: -300px;
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    .color-box:focus {
-      border: 1px solid black;
     }
   }
   .color-picker {

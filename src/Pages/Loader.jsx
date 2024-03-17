@@ -1,20 +1,23 @@
 import React from "react";
-import { DNA } from "react-loader-spinner";
+import Typed from "typed.js";
 
 const Loader = () => {
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Welcome", "To", "my", "portfolio"],
+      typeSpeed: 30,
+      showCursor: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
-    <div className="loader flex col">
-      <DNA
-        visible={true}
-        height="300"
-        width="300"
-        ariaLabel="vortex-loading"
-        wrapperStyle={{}}
-        wrapperClass="dna-wrapper"
-      />
-      <h1>
-        <span>Loa</span>ding
-      </h1>
+    <div className="loader flex">
+      <h1 ref={el}></h1>
     </div>
   );
 };

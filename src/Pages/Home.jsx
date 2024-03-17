@@ -1,29 +1,13 @@
 import React, { useState } from "react";
 import "../Styles/Home.scss";
 import { BiColorFill, BiMoon, BiSun } from "react-icons/bi";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaTimes } from "react-icons/fa";
 import "../Styles/About.scss";
 
 const Home = () => {
-  const colors = [
-    "#e27d60",
-    "#85dcbe",
-    "rgba(255,255,255,0.1)",
-    "black",
-    "#41b3a3",
-    "#c38d9e",
-  ];
-  const front_colors = [
-    "white",
-    "black",
-    "orange",
-    "pink",
-    "#41b3a3",
-    "#c38d9e",
-  ];
+  const colors = ["#e27d60", "#85dcbe", "orange", "#41b3a3", "#c38d9e"];
   const [color, set_color] = useState();
   const [show_colors, set_show_colors] = useState(false);
-  const [front_color, set_front_color] = useState();
   const [dark_theme, set_dark_theme] = useState(false);
   return (
     <div className={dark_theme == true ? "dark home-wrap" : "light home-wrap"}>
@@ -37,6 +21,9 @@ const Home = () => {
           className="colors-sect flex col"
           style={{ maxHeight: `${show_colors == true ? "100vh" : "0px"}` }}
         >
+          <div className="close-btn">
+            <FaTimes />
+          </div>
           <div className="top flex">
             {colors.map((color) => (
               <div
@@ -49,21 +36,11 @@ const Home = () => {
               ></div>
             ))}
           </div>
-          <div className="bottom flex">
-            {front_colors.map((color) => (
-              <div
-                key={color}
-                className="color-box"
-                style={{
-                  background: `${color}`,
-                }}
-                onClick={() => set_front_color(color)}
-              ></div>
-            ))}
-          </div>
         </div>
-        <h2 style={{ color: front_color }}>Hello I'm</h2>
-        <h1 style={{ color: front_color }}>Jawad</h1>
+        <h2>Hello I'm</h2>
+        <h1>
+          J<span>a</span>w<span>a</span>d
+        </h1>
       </div>
       <div className="color-picker flex col">
         <button
@@ -106,9 +83,9 @@ const Home = () => {
         </ul>
       </div>
       <div className="about-page flex col">
-        <h1 style={{ color: `${front_color}` }}>About</h1>
+        <h1 style={{ color: `${color}` }}>About</h1>
         <div className="bottom flex">
-          <div className="img-sect flex">
+          <div className="img-sect flex" style={{ background: `${color}` }}>
             <img src="./avatar.png" alt="" />
           </div>
           <div className="content flex col">
@@ -119,14 +96,8 @@ const Home = () => {
               nextjs and what makes me expert in web development is my passion
               and technical expertise with personal touch.
             </p>
-            <button
-              className="flex"
-              style={{ background: `${color}`, color: front_color }}
-            >
+            <button className="flex" style={{ background: `${color}` }}>
               Read More{" "}
-              <span style={{ color: front_color }}>
-                <FaArrowRight />
-              </span>
             </button>
           </div>
         </div>
